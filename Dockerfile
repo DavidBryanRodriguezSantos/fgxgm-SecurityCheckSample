@@ -1,5 +1,7 @@
 FROM node:20.13.0-bookworm-slim
 
+RUN apt-get update && apt-get install -y --no-install-recommends zlib1g-dev
+
 RUN npm install -g npm@9.1.3
 
 ADD package.json .
